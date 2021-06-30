@@ -1,54 +1,157 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Typography Scale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
-  <title>Typographic Scale</title>
 </head>
 <body>
-  <button class="blackmode-btn">black mode</button>
-  <input type="range" name="letter-spacing-range" id="letter-spacing-range" step="0.05" max="2" min="-2">
-  <p class="range-value-text">defalt value</p>
-  <div class="checkbox-wrap">
-    <input type="checkbox" name="fontsize" id="72" class="checkbox">
-    <label for="fontsize">72</label>
-  </div>
-  <div class="checkbox-wrap">
-    <input type="checkbox" name="fontsize" id="64" class="checkbox">
-    <label for="fontsize">64</label>
-  </div>
-  <div class="checkbox-wrap">
-    <input type="checkbox" name="fontsize" id="60" class="checkbox">
-    <label for="fontsize">60</label>
-  </div>
-  <div class="checkbox-wrap">
-    <input type="checkbox" name="fontsize" id="56" class="checkbox">
-    <label for="fontsize">56</label>
-  </div>
-  <div class="checkbox-wrap">
-    <input type="checkbox" name="fontsize" id="48" class="checkbox">
-    <label for="fontsize">48</label>
-  </div>
-  <div class="checkbox-wrap">
-    <input type="checkbox" name="fontsize" id="40" class="checkbox">
-    <label for="fontsize">40</label>
-  </div>
-  <div class="checkbox-wrap">
-    <input type="checkbox" name="fontsize" id="36" class="checkbox">
-    <label for="fontsize">36</label>
-  </div>
-  <div class="checkbox-wrap">
-    <input type="checkbox" name="fontsize" id="32" class="checkbox">
-    <label for="fontsize">32</label>
-  </div>
-  <ul class="font-list-ul">
-    <!-- <li class="notosanskr size72">Noto Sans KR 노토 산스 72</li> -->
-  </ul>
+
+  <header id="header">
+    <div class="header-wrap">
+      <div class="header-flex-wrap">
+        <h1 class="header-title">Typography Scale</h1>
+        <div class="header-button">
+          <button>sidenav</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+
+  <main id="main">
+    <section id="font-controls">
+      <label for="font-style-select">Select font style</label>
+      <select name="font-styles" id="font-style-select">
+        <option value="notosans">Noto Sans KR</option>
+        <option value="roboto">Roboto</option>
+      </select>
+    </section>
+    <section id="font-preview">
+      <div class="font-preview-header">
+        <div>Text</div>
+        <div>Size | px</div>
+      </div>
+      <div class="font-preview-main">
+        <ol class="font-preview-items">
+          <!-- <li class="font-preview-item font-size-9">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">9</div>
+          </li> -->
+          <li class="font-preview-item font-size-10">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">10</div>
+          </li>
+          <li class="font-preview-item font-size-11">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">11</div>
+          </li>
+          <li class="font-preview-item font-size-12">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">12</div>
+          </li>
+          <li class="font-preview-item font-size-14">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">14</div>
+          </li>
+          <li class="font-preview-item font-size-16">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">16</div>
+          </li>
+          <li class="font-preview-item font-size-18">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">18</div>
+          </li>
+          <li class="font-preview-item font-size-21">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">21</div>
+          </li>
+          <li class="font-preview-item font-size-24">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">24</div>
+          </li>
+          <li class="font-preview-item font-size-28">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">28</div>
+          </li>
+          <li class="font-preview-item font-size-32">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">32</div>
+          </li>
+          <li class="font-preview-item font-size-36">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">36</div>
+          </li>
+          <li class="font-preview-item font-size-40">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">40</div>
+          </li>
+          <li class="font-preview-item font-size-48">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">48</div>
+          </li>
+          <li class="font-preview-item font-size-56">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">56</div>
+          </li>
+          <li class="font-preview-item font-size-60">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">60</div>
+          </li>
+          <li class="font-preview-item font-size-64">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">64</div>
+          </li>
+          <li class="font-preview-item font-size-72">
+            <div class="font-text style-notosans">
+              <div class="text-p">Noto Sans KR 노토산스</div>
+            </div>
+            <div class="font-size">72</div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  
 </body>
 </html>
