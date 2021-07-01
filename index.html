@@ -27,11 +27,27 @@
 
   <main id="main">
     <section id="font-controls">
-      <label for="font-style-select">Select font style</label>
+      <!-- <label for="font-style-select">Select font style</label>
       <select name="font-styles" id="font-style-select">
         <option value="notosans">Noto Sans KR</option>
         <option value="roboto">Roboto</option>
-      </select>
+      </select> -->
+
+      <div class="select-box">
+        <div class="select-label">Select font style</div>
+        <div class="selected-item-box">
+          <div class="selected-item">Noto Sans KR</div>
+          <div class="select-icon">화살표</div>
+        </div>
+        <ul class="option-items">
+          <li class="option-item active">Noto Sans KR</li>
+          <li class="option-item">Roboto</li>
+          <li class="option-item">Spoqa Han Sans</li>
+          <li class="option-item">Nanum Gothic</li>
+          <li class="option-item">Open Sans</li>
+          <li class="option-item">Leto</li>
+        </ul>
+      </div>
     </section>
     <section id="font-preview">
       <div class="font-preview-header">
