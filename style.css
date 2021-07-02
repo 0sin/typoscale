@@ -58,6 +58,22 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+button {
+  font-family: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  color: inherit;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
 
 
 
@@ -133,11 +149,11 @@ table {
   margin-bottom: 8px;
 }
 
-.selected-item-box {
+.selected-item-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 0px 16px;
   width: 312px;
   height: 44px;
   border-radius: 8px;
@@ -145,7 +161,7 @@ table {
   cursor: pointer;
 }
 
-.selected-item-box.open {
+.selected-item-button.open {
   border-right: 1px solid var(--colorADADAD);
   border-left: 1px solid var(--colorADADAD);
   border-top: 1px solid var(--colorADADAD);
@@ -155,7 +171,10 @@ table {
 }
 
 .selected-item {
+  width: 100%;
+  height: 100%;
   font-size: 14px;
+  line-height: 44px;
   color: var(--color595959);
 }
 
@@ -170,7 +189,7 @@ table {
 }
 
 .option-items.open {
-  height: 200px;
+  height: 272px;
   border-right: 1px solid var(--colorADADAD);
   border-left: 1px solid var(--colorADADAD);
   border-bottom: 1px solid var(--colorADADAD);
@@ -180,17 +199,22 @@ table {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 
+.option-item-list {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background-color: var(--colorWhite);
+}
+
 .option-item {
   width: 100%;
-  height: 32px;
-  line-height: 32px;
+  height: 100%;
   padding: 0 16px;
-  background-color: var(--colorWhite);
   border-top: 1px solid var(--colorEBEBEB);
 }
 
-.option-item:first-child {
-  border-top: 0px solid var(--colorEBEBEB);
+.option-item-list:first-child > .option-item {
+  border-top: none;
 }
 
 .option-item:hover {
