@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 </head>
@@ -16,12 +18,103 @@
     <div class="header-wrap">
       <div class="header-flex-wrap">
         <h1 class="header-title">Typography Scale</h1>
-        <div class="header-button">
-          <button>sidenav</button>
-        </div>
+        <button type="button" class="detail-controls-button">
+          <i class="detail-controls-icon">
+            <img src="/assets/images/icon-sidevar.svg" alt="">
+          </i>
+        </button>
       </div>
     </div>
   </header>
+
+  <nav class="sidenav">
+    <button class="sidenav-close-button">X</button>
+    <div class="fontsize-control-box">
+      <h2>Font sizes</h2>
+      <ol>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="10" class="fscb" checked>
+          <label for="fontsize">10</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="11" class="fscb" checked>
+          <label for="fontsize">11</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="12" class="fscb" checked>
+          <label for="fontsize">12</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="14" class="fscb" checked>
+          <label for="fontsize">14</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="16" class="fscb" checked>
+          <label for="fontsize">16</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="18" class="fscb" checked>
+          <label for="fontsize">18</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="21" class="fscb" checked>
+          <label for="fontsize">21</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="24" class="fscb" checked>
+          <label for="fontsize">24</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="28" class="fscb" checked>
+          <label for="fontsize">28</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="32" class="fscb" checked>
+          <label for="fontsize">32</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="36" class="fscb" checked>
+          <label for="fontsize">36</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="40" class="fscb" checked>
+          <label for="fontsize">40</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="44" class="fscb">
+          <label for="fontsize">44</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="48" class="fscb" checked>
+          <label for="fontsize">48</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="52" class="fscb">
+          <label for="fontsize">52</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="56" class="fscb" checked>
+          <label for="fontsize">56</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="60" class="fscb" checked>
+          <label for="fontsize">60</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="64" class="fscb" checked>
+          <label for="fontsize">64</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="68" class="fscb">
+          <label for="fontsize">68</label>
+        </li>
+        <li class="checkbox-item">
+          <input type="checkbox" name="fontsize" id="72" class="fscb" checked>
+          <label for="fontsize">72</label>
+        </li>
+      </ol>
+    </div>
+  </nav>
 
   
 
@@ -34,14 +127,14 @@
       </select> -->
 
       <div class="select-box">
-        <h1 class="select-label">Select font style</h1>
+        <h2 class="select-label">Select font style</h2>
         <button type="button" class="selected-item-button">
-          <h2 class="selected-item">
+          <h3 class="selected-item">
             Noto Sans KR
-          </h2>
-          <span>
-            <i class="select-icon">+</i>
-          </span>
+          </h3>
+          <i class="toggle-icon">
+            <img src="/assets/images/icon-toggle.svg" class="toggle-icon-img" alt="">
+          </i>
         </button>
         <ul class="option-items">
           <li class="option-item-list">
@@ -56,7 +149,7 @@
           </li>
           <li class="option-item-list">
             <button type="button" value="1" class="option-item">
-              Spoqa Han Sans
+              Spoqa Han Sans Neo
             </button>
           </li>
           <li class="option-item-list">
@@ -71,12 +164,18 @@
           </li>
           <li class="option-item-list">
             <button type="button" value="1" class="option-item">
-              Leto
+              Lato
             </button>
           </li>
         </ul>
       </div>
+
+      <div class="preview-text">
+        <label for="preview-input">Preview Text</label>
+        <input type="text" name="preview-input" placeholder="Noto Sans KR 노토 산스" class="preview-input">
+      </div>
     </section>
+
     <section id="font-preview">
       <div class="font-preview-header">
         <div>Text</div>
@@ -84,114 +183,11 @@
       </div>
       <div class="font-preview-main">
         <ol class="font-preview-items">
-          <!-- <li class="font-preview-item font-size-9">
+          <!-- <li class="font-preview-item font-size-10">
             <div class="font-text style-notosans">
               <div class="text-p">Noto Sans KR 노토산스</div>
             </div>
-            <div class="font-size">9</div>
-          </li> -->
-          <li class="font-preview-item font-size-10">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">10</div>
-          </li>
-          <li class="font-preview-item font-size-11">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">11</div>
-          </li>
-          <li class="font-preview-item font-size-12">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">12</div>
-          </li>
-          <li class="font-preview-item font-size-14">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">14</div>
-          </li>
-          <li class="font-preview-item font-size-16">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">16</div>
-          </li>
-          <li class="font-preview-item font-size-18">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">18</div>
-          </li>
-          <li class="font-preview-item font-size-21">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">21</div>
-          </li>
-          <li class="font-preview-item font-size-24">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">24</div>
-          </li>
-          <li class="font-preview-item font-size-28">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">28</div>
-          </li>
-          <li class="font-preview-item font-size-32">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">32</div>
-          </li>
-          <li class="font-preview-item font-size-36">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">36</div>
-          </li>
-          <li class="font-preview-item font-size-40">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">40</div>
-          </li>
-          <li class="font-preview-item font-size-48">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">48</div>
-          </li>
-          <li class="font-preview-item font-size-56">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">56</div>
-          </li>
-          <li class="font-preview-item font-size-60">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">60</div>
-          </li>
-          <li class="font-preview-item font-size-64">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">64</div>
-          </li>
-          <li class="font-preview-item font-size-72">
-            <div class="font-text style-notosans">
-              <div class="text-p">Noto Sans KR 노토산스</div>
-            </div>
-            <div class="font-size">72</div>
-          </li>
+            <div class="font-size">10</div>-->
         </ol>
       </div>
     </section>

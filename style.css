@@ -6,6 +6,13 @@
   --color595959: #595959;
   --colorBlack: #000000;
   --mobileMargin: 15px;
+
+  --font-notosans: 'Noto Sans KR', serif;
+  --font-roboto: 'Roboto', 'Noto Sans KR', serif;
+  --font-opensans: 'Open Sans', 'Noto Sans KR', serif;
+  --font-lato: 'Lato', 'Noto Sans KR', serif;
+  /* --font-spoqa:; */
+  /* --font-nanum:; */
 }
 
 /* Reset */
@@ -42,6 +49,8 @@ body {
   font-weight: 400;
 	line-height: 1.4;
   cursor: default;
+  position: relative;
+  overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -59,6 +68,7 @@ table {
 	border-spacing: 0;
 }
 button {
+  display: block;
   font-family: inherit;
   font-size: inherit;
   text-align: inherit;
@@ -74,6 +84,8 @@ button:active {
   outline: none;
   box-shadow: none;
 }
+
+
 
 
 
@@ -107,6 +119,38 @@ button:active {
   text-transform: uppercase;
 }
 
+.detail-controls-button {
+  width: 44px;
+  height: 44px;
+}
+
+.detail-controls-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.detail-controls-icon img {
+  width: 100%;
+}
+
+
+/* Sidenav */
+.sidenav {
+  width: 321px;
+  height: 100vh;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  right: -321px;
+  background-color: gainsboro;
+  transition: right 500ms;
+}
+
+.sidenav.active {
+  right: 0;
+}
 
 
 
@@ -125,13 +169,14 @@ button:active {
   width: 100%;
   height: 120px;
   display: flex;
-  flex-flow: column;
-  justify-content: center;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
   z-index: 100;
 }
 
-#font-controls label {
+/* #font-controls label {
   display: block;
   margin-bottom: 8px;
 }
@@ -139,7 +184,9 @@ button:active {
   display: block;
   width: 312px;
   height: 44px;
-}
+} */
+
+.preview-text {display: none;}
 
 .select-box {
   width: 312px;
@@ -152,22 +199,18 @@ button:active {
 .selected-item-button {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0px 16px;
-  width: 312px;
+  padding: 0px 0px 0px 16px;
+  width: 100%;
   height: 44px;
   border-radius: 8px;
   border: 1px solid var(--colorADADAD);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .selected-item-button.open {
-  border-right: 1px solid var(--colorADADAD);
-  border-left: 1px solid var(--colorADADAD);
-  border-top: 1px solid var(--colorADADAD);
-  border-bottom: 1px solid var(--colorWhite);
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
+  border-bottom: 0px;
+  border-radius: 8px 8px 0px 0px;
 }
 
 .selected-item {
@@ -179,22 +222,20 @@ button:active {
 }
 
 .option-items {
-  font-size: 14px;
   width: 312px;
   height: 0px;
   position: absolute;
   z-index: 120;
   overflow: hidden;
+  font-size: 14px;
   background-color: var(--colorWhite);
 }
 
 .option-items.open {
   height: 272px;
-  border-right: 1px solid var(--colorADADAD);
-  border-left: 1px solid var(--colorADADAD);
-  border-bottom: 1px solid var(--colorADADAD);
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border: 1px solid var(--colorADADAD);
+  border-top: 0px;
+  border-radius: 0px 0px 8px 8px;
   overflow: visible;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
@@ -214,7 +255,7 @@ button:active {
 }
 
 .option-item-list:first-child > .option-item {
-  border-top: none;
+  border-top: 0px;
 }
 
 .option-item:hover {
@@ -225,6 +266,7 @@ button:active {
 .option-item.active {
   background-color: var(--colorADADAD);
 }
+
 
 /* Font Preview */
 .font-preview-header {
@@ -277,36 +319,48 @@ button:active {
 .font-size::before {
   content: "";
   position: absolute;
-  left: -24px;
-  width: 24px;
+  left: -60px;
+  width: 60px;
   height: 100%;
-  background-color: black;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 85%);
 }
 
 
 
 
 /* Styles */
-
 .style-notosans {
-  font-family: 'Noto Sans KR', serif;
+  font-family: var(--font-notosans);
+}
+.style-roboto {
+  font-family: var(--font-roboto);
+}
+.style-opensans {
+  font-family: var(--font-opensans);
+}
+.style-lato {
+  font-family: var(--font-lato);
 }
 
-/* .font-size-9 {font-size: 9px;} */
-.font-size-10 {font-size: 10px;}
-.font-size-11 {font-size: 11px;}
-.font-size-12 {font-size: 12px;}
-.font-size-14 {font-size: 14px;}
-.font-size-16 {font-size: 16px;}
-.font-size-18 {font-size: 18px;}
-.font-size-21 {font-size: 21px;}
-.font-size-24 {font-size: 24px;}
-.font-size-28 {font-size: 28px;}
-.font-size-32 {font-size: 32px;}
-.font-size-36 {font-size: 36px;}
-.font-size-40 {font-size: 40px;}
-.font-size-48 {font-size: 48px;}
-.font-size-56 {font-size: 56px;}
-.font-size-60 {font-size: 60px;}
-.font-size-64 {font-size: 64px;}
-.font-size-72 {font-size: 72px;}
+
+/* BUTTON */
+.toggle-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+.toggle-icon-img {
+  display: block;
+  /* width: 100%; */
+  height: 100%;
+}
+
+.toggle-icon-img.open {
+  transform: rotate(180deg);
+}
+
+.filter-blur {
+  filter: blur(3px);
+}

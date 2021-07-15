@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clip-icon-toggle">
+      <rect width="48" height="48"/>
+    </clipPath>
+  </defs>
+  <g id="icon-toggle" clip-path="url(#clip-icon-toggle)">
+    <rect width="48" height="48" fill="#fff"/>
+    <path id="_Color" data-name=" ↳Color" d="M0,0,6,6l6-6Z" transform="translate(18 22)" fill="#111"/>
+  </g>
+</svg>
