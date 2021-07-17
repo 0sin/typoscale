@@ -15,155 +15,277 @@
 <body>
 
   <header id="header">
-    <div class="header-wrap">
+    <div class="header-container">
       <div class="header-flex-wrap">
-        <h1 class="header-title">Typography Scale</h1>
+        <a href="index.html">
+          <h1 class="header-title">Typography Scale</h1>
+        </a>
         <button type="button" class="detail-controls-button">
-          <i class="detail-controls-icon">
-            <img src="/assets/images/icon-sidevar.svg" alt="">
-          </i>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+            <defs>
+              <clipPath id="clip-icon-sidevar_1">
+                <rect width="44" height="44"/>
+              </clipPath>
+            </defs>
+            <g id="icon-sidevar_1" data-name="icon-sidevar – 1" clip-path="url(#clip-icon-sidevar_1)">
+              <g transform="translate(-2 -2)">
+                <path d="M287.8,5H275a3,3,0,1,1,0-6h12.8A6,6,0,0,1,298.2-1H301a3,3,0,1,1,0,6h-2.8A6,6,0,0,1,287.8,5Z" transform="translate(-264 14)"/>
+                <path d="M277.8,5H275a3,3,0,1,1,0-6h2.8A6,6,0,0,1,288.2-1H301a3,3,0,1,1,0,6H288.2A6,6,0,0,1,277.8,5Z" transform="translate(-264 30)"/>
+              </g>
+            </g>
+          </svg>
         </button>
       </div>
     </div>
   </header>
 
-  <nav class="sidenav">
-    <button class="sidenav-close-button">X</button>
+  <nav id="sub-font-controls" class="sidenav">
+    <div class="close-button-wrap">
+      <button class="sidenav-close-button">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+          <defs>
+            <clipPath id="clip-icon-toggle_1">
+              <rect width="40" height="40"/>
+            </clipPath>
+          </defs>
+          <g id="icon-toggle_1" data-name="icon-toggle – 1" clip-path="url(#clip-icon-toggle_1)">
+            <g transform="translate(-3162.688 -301.734) rotate(-45)">
+              <rect width="4" height="24" transform="translate(2021 2466)"/>
+              <rect width="4" height="24" transform="translate(2035 2476) rotate(90)"/>
+            </g>
+          </g>
+        </svg>        
+      </button>
+    </div>
+    <div class="fontweight-control-box">
+      <button type="button">
+        <h2 class="fontweight-title">
+          Font weight
+        </h2>
+        <span class="toggle-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+            <defs>
+              <clipPath id="clip-icon-toggle">
+                <rect width="20" height="20"/>
+              </clipPath>
+            </defs>
+            <g id="icon-toggle" clip-path="url(#clip-icon-toggle)">
+              <path id="_Color" data-name=" ↳Color" d="M0,0,6,6l6-6Z" transform="translate(4 7)" fill="#111"/>
+            </g>
+          </svg>  
+        </span>
+      </button>
+      <ol class="fontweight-lists">
+        <li class="fontweight-list light">Light(300)</li>
+        <li class="fontweight-list regular">Regular(400)</li>
+        <li class="fontweight-list bold">Bold(700)</li>
+      </ol>
+    </div>
+    <div class="letterspacing-control-box">
+      <button type="button">
+        <h2 class="letterspacing-title">
+          Letter spacing
+        </h2>
+        <span class="toggle-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+            <defs>
+              <clipPath id="clip-icon-toggle">
+                <rect width="20" height="20"/>
+              </clipPath>
+            </defs>
+            <g id="icon-toggle" clip-path="url(#clip-icon-toggle)">
+              <path id="_Color" data-name=" ↳Color" d="M0,0,6,6l6-6Z" transform="translate(4 7)" fill="#111"/>
+            </g>
+          </svg>  
+        </span>
+      </button>
+      <div class="letter-spacing-ragne-wrap">
+        <label for="letter-spacing-range" class="letter-spacing-text">0</label>
+        <input type="range" name="letter-spacing-range" id="letter-spacing-range" step="0.1" max="2" min="-2">
+      </div>
+    </div>
     <div class="fontsize-control-box">
-      <h2>Font sizes</h2>
-      <ol>
+      <button type="button">
+        <h2 class="fontsizes-title">
+          Font sizes
+        </h2>
+        <span class="toggle-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+            <defs>
+              <clipPath id="clip-icon-toggle">
+                <rect width="20" height="20"/>
+              </clipPath>
+            </defs>
+            <g id="icon-toggle" clip-path="url(#clip-icon-toggle)">
+              <path id="_Color" data-name=" ↳Color" d="M0,0,6,6l6-6Z" transform="translate(4 7)" fill="#111"/>
+            </g>
+          </svg>  
+        </span>
+      </button> 
+      <ol class="checkbox-items">
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="10" class="fscb" checked>
-          <label for="fontsize">10</label>
+          <label for="10"></label>
+          <span>10</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="11" class="fscb" checked>
-          <label for="fontsize">11</label>
+          <label for="11"></label>
+          <span>11</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="12" class="fscb" checked>
-          <label for="fontsize">12</label>
+          <label for="12"></label>
+          <span>12</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="14" class="fscb" checked>
-          <label for="fontsize">14</label>
+          <label for="14"></label>
+          <span>14</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="16" class="fscb" checked>
-          <label for="fontsize">16</label>
+          <label for="16"></label>
+          <span>16</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="18" class="fscb" checked>
-          <label for="fontsize">18</label>
+          <label for="18"></label>
+          <span>18</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="21" class="fscb" checked>
-          <label for="fontsize">21</label>
+          <label for="21"></label>
+          <span>21</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="24" class="fscb" checked>
-          <label for="fontsize">24</label>
+          <label for="24"></label>
+          <span>24</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="28" class="fscb" checked>
-          <label for="fontsize">28</label>
+          <label for="28"></label>
+          <span>28</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="32" class="fscb" checked>
-          <label for="fontsize">32</label>
+          <label for="32"></label>
+          <span>32</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="36" class="fscb" checked>
-          <label for="fontsize">36</label>
+          <label for="36"></label>
+          <span>36</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="40" class="fscb" checked>
-          <label for="fontsize">40</label>
+          <label for="40"></label>
+          <span>40</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="44" class="fscb">
-          <label for="fontsize">44</label>
+          <label for="44"></label>
+          <span>44</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="48" class="fscb" checked>
-          <label for="fontsize">48</label>
+          <label for="48"></label>
+          <span>48</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="52" class="fscb">
-          <label for="fontsize">52</label>
+          <label for="52"></label>
+          <span>52</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="56" class="fscb" checked>
-          <label for="fontsize">56</label>
+          <label for="56"></label>
+          <span>56</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="60" class="fscb" checked>
-          <label for="fontsize">60</label>
+          <label for="60"></label>
+          <span>60</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="64" class="fscb" checked>
-          <label for="fontsize">64</label>
+          <label for="64"></label>
+          <span>64</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="68" class="fscb">
-          <label for="fontsize">68</label>
+          <label for="68"></label>
+          <span>68</span>
         </li>
         <li class="checkbox-item">
           <input type="checkbox" name="fontsize" id="72" class="fscb" checked>
-          <label for="fontsize">72</label>
+          <label for="72"></label>
+          <span>72</span>          
         </li>
       </ol>
     </div>
+    <div class="darkmode-control-box">
+        <h2 class="darkmode-title">
+          Dark mode
+        </h2>
+        <div class="darkmode-control-button">
+          <span class="onoff-text">Off</span>
+          <input type="checkbox" name="onoff-toggle" id="onoff-toggle">
+          <label for="onoff-toggle" class="onoff-toggle-label"></label>
+        </div>
+    </div>
   </nav>
 
-  
-
-  <main id="main">
-    <section id="font-controls">
-      <!-- <label for="font-style-select">Select font style</label>
-      <select name="font-styles" id="font-style-select">
-        <option value="notosans">Noto Sans KR</option>
-        <option value="roboto">Roboto</option>
-      </select> -->
-
-      <div class="select-box">
+  <main id="main-contents">
+    <section id="main-font-controls">
+      <div class="fontstyle-select-box">
         <h2 class="select-label">Select font style</h2>
         <button type="button" class="selected-item-button">
           <h3 class="selected-item">
             Noto Sans KR
           </h3>
-          <i class="toggle-icon">
-            <img src="/assets/images/icon-toggle.svg" class="toggle-icon-img" alt="">
-          </i>
+          <span class="toggle-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <defs>
+                <clipPath id="clip-icon-toggle">
+                  <rect width="20" height="20"/>
+                </clipPath>
+              </defs>
+              <g id="icon-toggle" clip-path="url(#clip-icon-toggle)">
+                <path id="_Color" data-name=" ↳Color" d="M0,0,6,6l6-6Z" transform="translate(4 7)" fill="#111"/>
+              </g>
+            </svg>  
+          </span>
         </button>
         <ul class="option-items">
           <li class="option-item-list">
-            <button type="button" value="1" class="option-item  active">
+            <button type="button" class="option-item style-notosans active">
               Noto Sans KR
             </button>
           </li>
           <li class="option-item-list">
-            <button type="button" value="1" class="option-item">
-              Roboto
-            </button>
-          </li>
-          <li class="option-item-list">
-            <button type="button" value="1" class="option-item">
+            <button type="button" class="option-item style-spoqa">
               Spoqa Han Sans Neo
             </button>
           </li>
           <li class="option-item-list">
-            <button type="button" value="1" class="option-item">
+            <button type="button" class="option-item style-nanum">
               Nanum Gothic
             </button>
           </li>
           <li class="option-item-list">
-            <button type="button" value="1" class="option-item">
+            <button type="button" class="option-item style-roboto">
+              Roboto
+            </button>
+          </li>
+          <li class="option-item-list">
+            <button type="button" class="option-item style-opensans">
               Open Sans
             </button>
           </li>
           <li class="option-item-list">
-            <button type="button" value="1" class="option-item">
+            <button type="button" class="option-item style-lato">
               Lato
             </button>
           </li>

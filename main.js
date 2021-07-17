@@ -1,7 +1,7 @@
 // 0. 폰트 아이템 객체 생성
 
 // 생성자 함수
-function CreateFontListObj(fontSize) {
+function CreateFontListObj(fontSize, fontStyle) {
   this.fontStyle = 'Noto Sans KR',
   this.fontSize = fontSize,
   this.fontWeight = 400,
@@ -26,8 +26,8 @@ function createHTMLString(array) {
   const listStringArray = array.map((item, index, arr) => {
     return `
     <li class="font-preview-item" style="font-size: ${item.fontSize}px">
-      <div class="font-text" style="font-family: ${item.fontStyle}, serif">
-        <div class="text-p">${item.text} 한글 폰트 지원</div>
+      <div class="font-text" style="font-family: '${item.fontStyle}', serif">
+        <div class="text-p">${item.text}</div>
       </div>
       <div class="font-size">${item.fontSize}</div>
     </li>
@@ -84,17 +84,16 @@ document.addEventListener('click', e => {
   const optionItems = document.querySelector('.option-items');
   const optionItem = document.querySelectorAll('.option-item');
   const selectedItem = document.querySelector('.selected-item');
-  const toggleIcon = document.querySelector('.toggle-icon-img');
 
   // 1) 셀렉트 박스 클릭-오픈
   if(e.target.closest('.selected-item-button')) { //화살표 추가하기
     optionItemsButton.classList.toggle('open');
     optionItems.classList.toggle('open');
-    toggleIcon.classList.toggle('open');
+    // toggleIcon.classList.toggle('open');
   } else {
     optionItemsButton.classList.remove('open');
     optionItems.classList.remove('open');
-    toggleIcon.classList.remove('open');
+    // toggleIcon.classList.remove('open');
   }
 
   // 옵션 아이템 선택-아이템 텍스트 전달
@@ -113,7 +112,7 @@ document.addEventListener('click', e => {
   // 2) sidenav 클릭-active
   const sideNav = document.querySelector('.sidenav')
   const header = document.querySelector('#header')
-  const main = document.querySelector('#main')
+  const main = document.querySelector('#main-contents')
 
   if(e.target.closest('.detail-controls-button')) {
     sideNav.classList.add('active');
@@ -187,7 +186,7 @@ document.addEventListener('click', e => {
 
 })
 
-
+// Preview Text 감지
 document.querySelector('.preview-input').addEventListener('keyup', e => {
   const previewInputValue = document.querySelector('.preview-input').value;
   const previewTextItem = document.querySelectorAll('.text-p');
@@ -197,7 +196,12 @@ document.querySelector('.preview-input').addEventListener('keyup', e => {
   return previewInputValue;
 });
 
-
+// Letter spacing 감지
+document.querySelector('#letter-spacing-range').addEventListener('change', () => {
+  let rangeValueText = document.querySelector('.letter-spacing-text');
+  let letterSpacingValue = document.querySelector('#letter-spacing-range').value;
+  rangeValueText.innerHTML = letterSpacingValue;
+});
 
 
 
